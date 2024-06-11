@@ -6,4 +6,4 @@ sudo apt-get -y install ufw
 sudo ufw allow 'Nginx HTTP'
 sudo ufw enable
 sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
-sudo service nginx start
+sudo service nginx restart
