@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
-# Open the 80 port
-sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
-service nginx restart
+# Command to make an nginx server listen on port 80
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo apt-get -y install ufw
+sudo ufw allow 'Nginx HTTP'
+sudo ufw enable
+sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+sudo service nginx start
